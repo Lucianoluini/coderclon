@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+        box-sizing: border-box;
+/*selector universal que resetea todos los estilos que por default tienen los navegadores*/
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url(./assets/ttf/Lato-Regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url(./assets/ttf/Lato-Bold.ttf);
+}
+/*Estilo global para a y ul*/
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'lato';
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    background-color: #0f172a;
+    padding: 30px 20px; /*30 aplica arriba y abajo. 20 izq y der*/
+}
+
+.header__container {
+    max-width: 1200px; /*máximo tamaño que tendrá el contenedor*/
+    margin: 0 auto; /*centra a la pantalla. Margen izq y der tendra margen auto. En el caso 1200px*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__container-navbar {
+    display: none;
+}
+
+.header__container-navbar li {
+    margin: 0 15px;
+}
+
+.header__container-navbar li a {
+    color: #e2e8f0;
+    font-weight: bold;
+}
+
+.header__container h3 a {
+    color: #22c55e;
+}
+
+
+/* Hero */
+.hero {
+    background-color: #14532d;
+    padding: 60px 20px;
+    color: #e2e8f0;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 50px;
+}
+
+.header__container-info h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.header__container-info p {
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.header__container-info a {
+    color: #e2e8f0;
+    border-radius: 10px;
+    background-color: #0f172a;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+}
+
+.header__container-video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); /* (x, y, difuminado, tamaño de sombra, color */
+}
+
+/* tarjetas */
+.courses {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.courses__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); /* (x, y, difuminado, tamaño de sombra, color */
+    width: 400px;
+}
+
+.card__header {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover; /* para manipular la redimensión de la imagen. Cover: mantiene relación de aspecto */
+
+}
+
+
+.card__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card__description {
+    margin-bottom: 40px;
+}
+
+.card__link {
+    background-color: #22c55e;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 0;
+    border-radius: 10px;
+    width: 100%;
+    display: block; /* para poder utilizar el width */
+    text-align: center;
+}
+
+
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+    .header__container-navbar {
+    display: flex;
+    }
+    .header__container-navbar-mobile {
+        display: none;
+    }
+    .hero__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .courses__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .hero__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+}
+.courses__cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
