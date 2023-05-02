@@ -57,6 +57,14 @@ ul {
     color: #22c55e;
 }
 
+.header__container h3 a:hover::after {
+    content: 'Inicio';
+    font-size: 14px;
+    margin-left: 5px;
+    color: #e2e8f0
+
+} 
+
 
 /* Hero */
 .hero {
@@ -154,6 +162,7 @@ ul {
 @media screen and (min-width: 768px) {
     .header__container-navbar {
     display: flex;
+    align-items: center;
     }
     .header__container-navbar-mobile {
         display: none;
@@ -164,6 +173,12 @@ ul {
     .courses__cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+/*  .header__container-navbar li {
+        margin: 0 15px;
+    }
+
+    .header__container-navbar li:last-child */
 
 }
 
